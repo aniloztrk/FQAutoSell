@@ -35,7 +35,7 @@ namespace FQAutoSell.Components
 
                 player.Inventory.removeItem(page, index);
 
-                Uconomy.Instance.Database.IncreaseBalance(player.CSteamID.m_SteamID.ToString(), Main.Instance.Configuration.Instance.items.FirstOrDefault(x => x.itemId == jar.item.id).price);
+                Uconomy.Instance.Database.IncreaseBalance(player.Id, Main.Instance.Configuration.Instance.items.FirstOrDefault(x => x.itemId == jar.item.id).price);
             });
 
         }
